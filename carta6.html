@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta</title>
+
+<link rel="stylesheet" href="carta.css">
+<link rel="stylesheet" href="lembrancas.css">
+
+</head>
+
+<body>
+
+<div class="letter-container">
+  <div class="paper">
+    <div class="hearts">
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+</div>
+     <p class="letter-text">
+    OI ISAA 💗<br>
+Vc é uma pessoa muito especial pra mim,<br> e msm não demonstrando eu te amo muito.<br> Quando te conheci no 5° ano, eu não ia muito com a sua cara kkk,<br> mas dps de um tempo, percebi o quanto eu tava sendo chata por te julgar sem te conhecer.<br> Quando falei com vc vi que vc parecia ser uma boa pessoa e decidi me aproximar mais,<br> e foi assim que vc virou uma das minhas melhores amiga.<br> Quando nós brigamos,<br> eu falava pra todo mundo q não sentia a sua falta, mas eu estava mentindo pras pessoas e pra mim mesma,<br> e quando nós voltávamos a nos falar vim o quão especial vc é pra mim.<br> Nos fizemos partes de vários grupos de amigos,<br> mas no final sempre voltávamos a ser uma dupla,<br> mas quando isabella chegou viramos um trio inseparável e melhores amigas.<br> Melhora logo, sdds e amo vcc 
+💗💗
+    </p>
+
+    <img src="sophia.png" class="foto-carta">
+
+    <div class="lado esquerdo"></div>
+    <div class="lado direito"></div>
+
+  </div>
+</div>
+
+
+<!-- BOTÃO MÚSICA -->
+<button class="btn-musica" onclick="toggleMusica()">
+🎵 Tocar música
+</button>
+
+
+<!-- BOTÃO VOLTAR -->
+<button id="enterBtn" onclick="voltarLembrancas()">
+⬅ Voltar 
+</button>
+
+
+<!-- ÁUDIO -->
+<audio id="musicaCarta">
+  <source src="sophia.mp3" type="audio/mp3">
+</audio>
+
+
+<script>
+function toggleMusica() {
+  const musica = document.getElementById("musicaCarta");
+  const botao = document.querySelector(".btn-musica");
+
+  if (musica.paused) {
+    musica.play();
+    botao.textContent = "⏸ Pausar música";
+  } else {
+    musica.pause();
+    botao.textContent = "🎵 Tocar música";
+  }
+}
+
+function voltarLembrancas() {
+  window.location.href = "lembrancas.html";
+}
+</script>
+
+</body>
+</html>

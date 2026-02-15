@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta</title>
+
+<link rel="stylesheet" href="carta.css">
+<link rel="stylesheet" href="lembrancas.css">
+
+</head>
+
+<body>
+
+<div class="letter-container">
+  <div class="paper">
+    <div class="hearts">
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+</div>
+     <p class="letter-text">
+      Amiga,<br> tanto eu quanto vc sabemos o quanto somos importantes uma pra outra,<br> 
+      eu tenho toda a certeza que se eu não tivesse te conhecido tudo teria sido muito diferente e, muito mais dificil.<br> 
+      Eu te amo muito, amo principalmente a pessoa que você se tornou,<br> 
+      uma menina forte, muito determinada, teimosa as veses... kkk mas uma pessoa incrivel,<br> 
+      com um coração enorme, aquela pessoa que sempre ta la, pra nos aconselhar e ajudar.<br> 
+      Eu quero te agradecer por tudo o que você ja fez por mim,<br> 
+      agradecer por quando você me ouvio umas mil veses, falando sobre o mesmo assunto até que eu me curasse,<br> 
+      até mesmo quando você estava precisando ser ouvida.<br> 
+      Eu tenho orgulho de falar que vejo o brilho do espírito santo em ti<br> 
+      e mais orgulho ainda de falar que você é minha melhor amiga!!! <br><br>
+
+      Quero te dedicar,<br>
+      Provérbios 3:15 que diz<br>
+      "Mais preciosa é ela do que os rubis,<br>
+      e tudo o que mais podes desejar não se pode comparar a ela" ❤️‍🩹
+    </p>
+
+    <img src="img/WhatsApp Image 2026-02-11 at 21.42.22.jpeg" class="foto-carta">
+
+    <div class="lado esquerdo"></div>
+    <div class="lado direito"></div>
+
+  </div>
+</div>
+
+
+<!-- BOTÃO MÚSICA -->
+<button class="btn-musica" onclick="toggleMusica()">
+🎵 Tocar música
+</button>
+
+
+<!-- BOTÃO VOLTAR -->
+<button id="enterBtn" onclick="voltarLembrancas()">
+⬅ Voltar
+</button>
+
+
+<!-- ÁUDIO -->
+<audio id="musicaCarta">
+  <source src="musica/musica-carta2.mp3" type="audio/mp3">
+</audio>
+
+
+<script>
+function toggleMusica() {
+  const musica = document.getElementById("musicaCarta");
+  const botao = document.querySelector(".btn-musica");
+
+  if (musica.paused) {
+    musica.play();
+    botao.textContent = "⏸ Pausar música";
+  } else {
+    musica.pause();
+    botao.textContent = "🎵 Tocar música";
+  }
+}
+
+function voltarLembrancas() {
+  window.location.href = "lembrancas.html";
+}
+</script>
+
+</body>
+</html>

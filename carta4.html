@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta</title>
+
+<link rel="stylesheet" href="carta.css">
+<link rel="stylesheet" href="lembrancas.css">
+
+</head>
+
+<body>
+
+<div class="letter-container">
+  <div class="paper">
+    <div class="hearts">
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+</div>
+     <p class="letter-text">
+    Isabel,<br> eu já falei isso mas o jeito em que a gente começou a se falar foi o meia engraçado possível!<br>
+Nathan tinha pegado meu lanche e tu deu um tapa nele e me devolveu,<br> mano eu não sabia que ali ia começar a falar com umas das pessoas mais importantes para mim!<br>
+Você sempre me ajuda quando eu preciso,<br> me dá concelhos,<br> me faz ficar com medo da sua vida e feliz com ela também!<br>
+Eu te amo muito,<br> e nunca vou cansar de dizer isso, pode contar comigo sempre.❤️‍🩹
+    </p>
+
+    <img src="clara.png" class="foto-carta">
+
+    <div class="lado esquerdo"></div>
+    <div class="lado direito"></div>
+
+  </div>
+</div>
+
+
+<!-- BOTÃO MÚSICA -->
+<button class="btn-musica" onclick="toggleMusica()">
+🎵 Tocar música
+</button>
+
+
+<!-- BOTÃO VOLTAR -->
+<button id="enterBtn" onclick="voltarLembrancas()">
+⬅ Voltar 
+</button>
+
+
+<!-- ÁUDIO -->
+<audio id="musicaCarta">
+  <source src="clara.mp3" type="audio/mp3">
+</audio>
+
+
+<script>
+function toggleMusica() {
+  const musica = document.getElementById("musicaCarta");
+  const botao = document.querySelector(".btn-musica");
+
+  if (musica.paused) {
+    musica.play();
+    botao.textContent = "⏸ Pausar música";
+  } else {
+    musica.pause();
+    botao.textContent = "🎵 Tocar música";
+  }
+}
+
+function voltarLembrancas() {
+  window.location.href = "lembrancas.html";
+}
+</script>
+
+</body>
+</html>

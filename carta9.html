@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta</title>
+
+<link rel="stylesheet" href="carta.css">
+<link rel="stylesheet" href="lembrancas.css">
+
+</head>
+
+<body>
+
+<div class="letter-container">
+  <div class="paper">
+    <div class="hearts">
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+  <span>❤️</span>
+</div>
+     <p class="letter-text">
+      eu não sei bem o que falar,<br> não tenho palavras pra descrever o que você significa pra mim,<br> 
+      já passamos por tantas brigas e todas elas a gente superou.<br> Eu agradeço a Deus por ter colocado você na minha vida, <br>
+      por que se não fosse você,<br> eu não sei o que seria hoje, <br>você me faz rir quando eu quero chorar,<br> consegue me acalmar quando quero matar alguém.<br> 
+      Não somos apenas amigas, somos irmãs.<br> Obrigada por acreditar em mim, obrigada por saber lidar com esse meu jeito,<br>
+      você é a única pessoa em que eu confio de olhos fechados,<br> você foi a única q esteve comigo nos momentos em que ameacei cair.<br>
+      Aconteça o que acontecer, eu sou com você pra sempre, <br>até o fim do sempre, quando você chorar eu vou chorar com você,<br>
+      quando você precisar de um abraço, eu vou lhe abraçar, <br>
+      quando você precisar de um ombro amigo o meu estará disponível.<br> Eu te amo, e lembre-se disso,<br> pra sempre bel. ❤️ ❤️‍🩹
+    </p>
+
+    <img src="img/ana.png" class="foto-carta">
+
+    <div class="lado esquerdo"></div>
+    <div class="lado direito"></div>
+
+  </div>
+</div>
+
+
+<!-- BOTÃO MÚSICA -->
+<button class="btn-musica" onclick="toggleMusica()">
+🎵 Tocar música
+</button>
+
+
+<!-- BOTÃO VOLTAR -->
+<button id="enterBtn" onclick="voltarLembrancas()">
+⬅ Voltar 
+</button>
+
+
+<!-- ÁUDIO -->
+<audio id="musicaCarta">
+  <source src="musica/musica-carta2.mp3" type="audio/mp3">
+</audio>
+
+
+<script>
+function toggleMusica() {
+  const musica = document.getElementById("musicaCarta");
+  const botao = document.querySelector(".btn-musica");
+
+  if (musica.paused) {
+    musica.play();
+    botao.textContent = "⏸ Pausar música";
+  } else {
+    musica.pause();
+    botao.textContent = "🎵 Tocar música";
+  }
+}
+
+function voltarLembrancas() {
+  window.location.href = "lembrancas.html";
+}
+</script>
+
+</body>
+</html>
