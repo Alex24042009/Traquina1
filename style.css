@@ -1,0 +1,191 @@
+font-face {
+  font-family: 'Soria';
+  src: url('fonts/Soria-Regular.ttf') format('truetype');
+}
+
+  /* ===== RESET BÁSICO ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Soria', cursive;
+  }
+
+  /* ===== TELA INICIAL ===== */
+  #home {
+    height: 100vh;
+    /* ocupa toda a altura da tela */
+    background: linear-gradient(135deg, #e8b6fa, #9a3ac7);
+    /* fundo degradê */
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontal */
+    align-items: center;
+    /* centraliza vertical */
+    text-align: center;
+    padding: 20px;
+  }
+
+
+  .center h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    /* espaço entre o texto e o botão */
+  }
+
+  * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+  .center button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: white;
+    color: #ba5df8;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+
+  .center button:hover {
+    transform: scale(1.5);
+  }
+
+
+  /* FOTO DENTRO DO CORAÇÃO */
+  .heart-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+.heart-photo {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+
+  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg") center / contain no-repeat;
+  mask: url("https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg") center / contain no-repeat;
+
+  animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-10px) scale(1.05);
+      opacity: 0.9;
+    }
+
+    100% {
+      transform: translateY(-20px) scale(1);
+      opacity: 0.8;
+    }
+  }
+
+  /* ===== CORAÇÕES FLUTUANTES ===== */
+  .floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* não bloqueia cliques */
+    overflow: hidden;
+    z-index: 0;
+    /* atrás do conteúdo principal */
+  }
+
+  .float-heart {
+    position: absolute;
+    bottom: -40px;
+    /* começa abaixo da tela */
+    width: 25px;
+    height: 25px;
+    background: #6d2864;
+    transform: rotate(-45deg);
+    animation: heartsFloat 6s ease-in infinite;
+  }
+
+  .float-heart::before,
+  .float-heart::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: inherit;
+    border-radius: 50%;
+  }
+
+  .float-heart::before {
+    top: -12.5px;
+    left: 0;
+  }
+
+  .float-heart::after {
+    left: 12.5px;
+    top: 0;
+  }
+
+  /* 🎈 Animação exclusiva para subir */
+  @keyframes heartsFloat {
+    0% {
+      transform: translateY(0) rotate(-45deg) scale(1);
+      opacity: 0.9;
+    }
+
+    100% {
+      transform: translateY(-130vh) rotate(-45deg) scale(0.7);
+      opacity: 0;
+    }
+  }
+
+  /* posições e tempos variados para cada coração */
+  .float-heart:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+  }
+
+  .float-heart:nth-child(2) {
+    left: 25%;
+    animation-duration: 6s;
+  }
+
+  .float-heart:nth-child(3) {
+    left: 40%;
+    animation-duration: 7s;
+  }
+
+  .float-heart:nth-child(4) {
+    left: 60%;
+    animation-duration: 5.5s;
+  }
+
+  .float-heart:nth-child(5) {
+    left: 80%;
+    animation-duration: 6.5s;
+  }
+  .contador-amor {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.contador-amor h2 {
+  margin-bottom: 8px;
+}
+
+#tempoJuntos {
+  font-size: 26px;
+  font-weight: 'Soria', cursive;
+}

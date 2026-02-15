@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembranças</title>
+
+  <link rel="stylesheet" href="lembrancas.css">
+</head>
+
+<body>
+
+  <h1 class="titulo"> Nunca diga que está só, <br>
+    porque nós estaremos aqui sempre pra você, e por você...</h1>
+
+  <div class="cartas-container">
+
+    <a href="carta1.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+
+      </div>
+
+      <p>Jeyse</p>
+
+    </a>
+
+    <!-- CARTA 2 -->
+    <a href="carta2.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+
+      </div>
+      <p>Acsa</p>
+    </a>
+
+    <!-- CARTA 3 -->
+    <a href="carta3.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+
+      </div>
+      <p>Evy</p>
+    </a>
+
+    <a href="carta4.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Clara</p>
+    </a>
+
+    <a href="carta5.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Isabela</p>
+    </a>
+
+    <a href="carta6.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+
+      </div>
+      <p>Sophia</p>
+    </a>
+
+    <a href="carta7.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>keyse</p>
+    </a>
+
+    <a href="carta8.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Rebeca</p>
+    </a>
+
+    <a href="carta9.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Ana</p>
+    </a>
+
+    <a href="carta10.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Eloa</p>
+    </a>
+
+    <a href="carta11.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Manu</p>
+    </a>
+
+    <a href="carta12.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Aninha</p>
+    </a>
+
+    <a href="carta13.html" class="carta">
+      <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+      </div>
+      <p>Tiago</p>
+    </a>
+
+    <a href="carta14.html" class="carta">
+     <div class="envelope">
+        <div class="flap"></div>
+        <div class="letter">💌</div>
+        <div class="body"></div>
+</div>
+      <p>Alex</p>
+    </a>
+
+
+  </div>
+
+<button id="enterBtn" onclick="voltarIndex()">
+⬅ Voltar 
+</button>
+ 
+
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  var cartas = document.querySelectorAll(".carta");
+
+  cartas.forEach(function(carta){
+
+    carta.addEventListener("click", function(e){
+
+      e.preventDefault();
+
+      var link = carta.href;
+
+      setTimeout(function(){
+        window.location.href = link;
+      }, 1000);
+
+    });
+
+  });
+
+});
+</script>
+<script>
+function voltarIndex() {
+  window.location.href = "index.html";
+}
+</script>
+</body>
+
+</html>

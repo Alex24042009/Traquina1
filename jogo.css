@@ -1,0 +1,70 @@
+/* ===== FUNDO ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6e8, #fff0f5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+}
+
+/* ===== TÍTULO ===== */
+.titulo-jogo {
+  margin-bottom: 25px;
+  color: #b30059;
+}
+
+/* ===== QUEBRA CABEÇA 20 PEÇAS ===== */
+#puzzle {
+  width: 500px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  background: white;
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* ===== PEÇAS ===== */
+.peca {
+  width: 100px;
+  height: 100px;
+  background-image: url("isabelealex.png");
+  background-size: 500px 400px;
+  cursor: grab;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.peca:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MENSAGEM ===== */
+.mensagem-final {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #b30059;
+  text-align: center;
+}
+.btn-video {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #ff4d88;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-video:hover {
+  background: #e6005c;
+}
+
+
